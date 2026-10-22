@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "id": "example-m2c2-next",
+  "version": 1,
+  "name": "M2C2 Symbol Search — First Next",
+  "description": "Live-verified 1280×800 example that advances the first instruction screen. Intended as a recording/replay sanity check, not a complete assessment strategy.",
+  "assessmentUrl": "https://runner.m2c2kit.com/assessments/@m2c2kit/assessment-symbol-search@0.8.35/index.html?study_id=demo&api_key=demo",
+  "mode": "scripted",
+  "viewport": { "width": 1280, "height": 800, "deviceScaleFactor": 1 },
+  "parameters": {},
+  "metadata": { "createdAt": "2026-10-22T13:02:01.104Z", "updatedAt": "2026-10-22T13:02:01.104Z", "tags": ["example", "live-verified", "instruction-only"], "learnedByAI": false, "recordingScreenshots": [] },
+  "steps": [
+    { "type": "click", "x": 745, "y": 695, "normalizedX": 0.58203125, "normalizedY": 0.86875, "button": "left", "delayMs": 250 }
+  ],
+  "completion": { "maxDurationMs": 10000, "maxActions": 10 }
+}

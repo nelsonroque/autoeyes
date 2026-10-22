@@ -1,0 +1,360 @@
+{
+  "schemaVersion": "1.0",
+  "id": "tmb-recorded-20trials-symbolsearch-5b330277",
+  "version": 1,
+  "name": "tmb recorded 20trials symbolsearch",
+  "assessmentUrl": "https://v3.testmybrain.org/m2c2_testbench/?study=m2c2_testbench&group=1&id=999999999",
+  "mode": "scripted",
+  "viewport": {
+    "width": 1280,
+    "height": 800,
+    "deviceScaleFactor": 1
+  },
+  "parameters": {},
+  "metadata": {
+    "createdAt": "2026-10-22T13:21:57.436Z",
+    "updatedAt": "2026-10-22T13:21:57.436Z",
+    "tags": [
+      "recorded"
+    ],
+    "learnedByAI": false,
+    "recordingScreenshots": [
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675281931.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675283081.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675284093.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675288381.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675288952.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675289448.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675289956.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675290469.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675290998.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675291499.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675291965.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675292482.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675292964.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675293416.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675293782.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675294155.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675294694.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675295183.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675295641.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675296317.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675297003.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675297263.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675297515.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675297922.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675298325.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675298580.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675298952.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675299389.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675299959.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675300490.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675300998.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675301435.png",
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792675301892.png"
+    ]
+  },
+  "steps": [
+    {
+      "delayMs": 3391,
+      "type": "click",
+      "x": 723,
+      "y": 698,
+      "normalizedX": 0.56484375,
+      "normalizedY": 0.8725,
+      "button": "left"
+    },
+    {
+      "delayMs": 1150,
+      "type": "click",
+      "x": 723,
+      "y": 698,
+      "normalizedX": 0.56484375,
+      "normalizedY": 0.8725,
+      "button": "left"
+    },
+    {
+      "delayMs": 1012,
+      "type": "click",
+      "x": 723,
+      "y": 698,
+      "normalizedX": 0.56484375,
+      "normalizedY": 0.8725,
+      "button": "left"
+    },
+    {
+      "delayMs": 4288,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 571,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 496,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 508,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 513,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 529,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 501,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 466,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 517,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 482,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 452,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 366,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 373,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 539,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 489,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 458,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 676,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 686,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 260,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 252,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 407,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 403,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 255,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 372,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 437,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 570,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 531,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 508,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 437,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    },
+    {
+      "delayMs": 457,
+      "type": "click",
+      "x": 742,
+      "y": 650,
+      "normalizedX": 0.5796875,
+      "normalizedY": 0.8125,
+      "button": "left"
+    }
+  ],
+  "completion": {
+    "maxDurationMs": 300000,
+    "maxActions": 1000
+  }
+}

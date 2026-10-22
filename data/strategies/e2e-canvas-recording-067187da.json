@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "id": "e2e-canvas-recording-067187da",
+  "version": 1,
+  "name": "E2E canvas recording",
+  "assessmentUrl": "http://localhost:4310/mock-assessment",
+  "mode": "scripted",
+  "viewport": {
+    "width": 1280,
+    "height": 800,
+    "deviceScaleFactor": 1
+  },
+  "parameters": {},
+  "metadata": {
+    "createdAt": "2026-10-22T13:14:55.264Z",
+    "updatedAt": "2026-10-22T13:14:55.264Z",
+    "tags": [
+      "recorded"
+    ],
+    "learnedByAI": false,
+    "recordingScreenshots": [
+      "/Users/nur375/Desktop/autoeyes/data/screenshots/recording-1792674895079.png"
+    ]
+  },
+  "steps": [
+    {
+      "delayMs": 142,
+      "type": "click",
+      "x": 640,
+      "y": 400,
+      "normalizedX": 0.5,
+      "normalizedY": 0.5,
+      "button": "left"
+    }
+  ],
+  "completion": {
+    "maxDurationMs": 300000,
+    "maxActions": 1000
+  }
+}

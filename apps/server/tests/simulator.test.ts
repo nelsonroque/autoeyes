@@ -1,0 +1,3 @@
+import { describe,it } from "node:test";import assert from "node:assert/strict";import { ParticipantSimulator } from "../src/ParticipantSimulator";
+const config={participantId:"SIM",meanRT:850,sdRT:180,accuracy:.9,errorProbability:0,lapseProbability:0,fatigueSlope:.01,practiceSlope:-.02,seed:42};
+describe("ParticipantSimulator",()=>{it("is reproducible and always produces positive RTs",()=>{const a=new ParticipantSimulator(config),b=new ParticipantSimulator(config);const xs=Array.from({length:30},(_,i)=>a.reactionTime(i)),ys=Array.from({length:30},(_,i)=>b.reactionTime(i));assert.deepEqual(xs,ys);assert.ok(xs.every(x=>x>=80));});});

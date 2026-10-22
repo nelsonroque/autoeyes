@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "id": "example-local-canvas",
+  "version": 1,
+  "name": "Local Canvas Mock — Start",
+  "description": "Example coordinate-only strategy for the bundled canvas assessment.",
+  "assessmentUrl": "http://localhost:4310/mock-assessment",
+  "mode": "scripted",
+  "viewport": { "width": 1280, "height": 800, "deviceScaleFactor": 1 },
+  "parameters": {},
+  "metadata": { "createdAt": "2026-01-01T00:00:00.000Z", "updatedAt": "2026-01-01T00:00:00.000Z", "tags": ["example", "canvas"], "learnedByAI": false, "recordingScreenshots": [] },
+  "steps": [
+    { "type": "click", "x": 640, "y": 493, "normalizedX": 0.5, "normalizedY": 0.61625, "button": "left", "delayMs": 300 },
+    { "type": "wait", "durationMs": 300, "delayMs": 0 }
+  ],
+  "completion": { "maxDurationMs": 10000, "maxActions": 20 }
+}
