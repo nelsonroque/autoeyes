@@ -53,7 +53,7 @@ During a replay or AI run, console messages from the assessment page (including 
 
 ## Comparing sessions
 
-Select saved runs under **Compare sessions** to compare action counts, durations and console message counts. Numeric values in complete JSON console messages or labeled JSON records such as `newData: {...}` can also be plotted by field and observation order, including nested objects and arrays. Per-session histograms show counts in shared bins for the selected field, such as `response_time_duration_ms`. Plain diagnostic text, incomplete JSON and non-JSON object previews are not interpreted as result data. Check that a field has the same meaning and units across runs; action counts and dispatch intervals are not assessment scores or response times. Older runs without console capture remain available.
+Select saved runs under **Compare sessions** to compare action counts, durations and console message counts. Numeric values in complete JSON console messages or labeled JSON records such as `newData: {...}` can also be plotted by field and observation order, including nested objects and arrays. Per-session histograms show counts in shared bins for the selected field, such as `response_time_duration_ms`. A Gaussian density comparison uses a shared bandwidth and scale; curves are normalized to area 1 and omit sessions with fewer than two values. Plain diagnostic text, incomplete JSON and non-JSON object previews are not interpreted as result data. Check that a field has the same meaning and units across runs; action counts and dispatch intervals are not assessment scores or response times. Older runs without console capture remain available.
 
 ## Strategy model
 

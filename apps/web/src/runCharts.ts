@@ -38,3 +38,18 @@ export function histogramCounts(values: number[], edges: number[]): number[] {
   }
   return counts;
 }
+
+// Shared Gaussian bandwidth and domain make session curves directly comparable.
+export function densityCurves(groups: number[][]): { x: number[]; curves: number[][]; bandwidth: number } | null {
+  const eligible = groups.filter(group => group.length >= 2);
+  const pooled = eligible.flat();
+  if (pooled.length < 2) return null;
+  const mean = pooled.reduce((sum, value) => sum + value, 0) / pooled.length;
+  const sd = Math.sqrt(pooled.reduce((sum, value) => sum + (value - mean) ** 2, 0) / (pooled.length - 1));
+  if (!Number.isFinite(sd) || sd === 0) return null;
+  const bandwidth = 1.06 * sd * pooled.length ** (-0.2);
+  const min = Math.min(...pooled) - 3 * bandwidth, max = Math.max(...pooled) + 3 * bandwidth;
+  const x = Array.from({length: 101}, (_, i) => min + (max - min) * i / 100);
+  const curves = groups.map(group => group.length < 2 ? [] : x.map(point => group.reduce((sum, value) => sum + Math.exp(-0.5 * ((point - value) / bandwidth) ** 2), 0) / (group.length * bandwidth * Math.sqrt(2 * Math.PI))));
+  return { x, curves, bandwidth };
+}

@@ -24,3 +24,16 @@ it("uses shared histogram bins and includes the maximum once", async () => {
   assert.deepEqual(histogramCounts([7, 7], histogramEdges([7, 7])), [2]);
   assert.deepEqual(histogramEdges([]), []);
 });
+
+it("computes comparable normalized density curves and omits sparse sessions", async () => {
+  const { densityCurves } = await import("../../web/src/runCharts.js");
+  const result = densityCurves([[1, 2, 3], [2, 3, 4], [5]]);
+  assert.ok(result);
+  assert.equal(result.curves[2].length, 0);
+  for (const curve of result.curves.slice(0, 2)) {
+    const area = curve.reduce((sum, v) => sum + v, 0) * (result.x[1] - result.x[0]);
+    assert.ok(Math.abs(area - 1) < 0.01);
+  }
+  assert.equal(densityCurves([[1], [2]]), null);
+  assert.equal(densityCurves([[1, 1]]), null);
+});

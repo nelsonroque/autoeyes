@@ -54,3 +54,7 @@ input,textarea{min-width:0;padding:10px 11px;color:#111;background:#fff;border:2
 .param-row { display:grid; grid-template-columns:1fr 1fr auto; gap:7px; margin-top:7px; }
 .param-row input { width:100%; padding:7px; font:12px "Courier New",monospace; }
 @media(max-width:560px) { .param-row { grid-template-columns:1fr 1fr; } .param-row button { grid-column:1/-1; } }
+
+.density { margin:20px 0; }
+.density-legend { display:flex; flex-wrap:wrap; gap:12px; margin:8px 0; font:11px "Courier New",monospace; }
+.density small { font:10px "Courier New",monospace; }
