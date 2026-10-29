@@ -54,6 +54,7 @@ export const participantConfigSchema = z.object({
 export type ParticipantConfig = z.infer<typeof participantConfigSchema>;
 
 export interface ActionLog { index: number; type: string; plannedAtMs: number; dispatchedAtMs?: number; completedAtMs?: number; plannedDelayMs?: number; actualDelayMs?: number; status: "planned"|"running"|"success"|"failed"|"skipped"; detail?: unknown; error?: string; screenshot?: string; }
-export interface RunRecord { id: string; assessmentUrl: string; strategyId?: string; strategyVersion?: number; mode: TestingMode; simulated: boolean; startedAt: string; endedAt?: string; status: "running"|"paused"|"completed"|"failed"|"stopped"; actions: ActionLog[]; screenshots: string[]; errors: string[]; warnings: string[]; tokenUsage: { input: number; output: number; estimatedCostUsd: number }; participant?: ParticipantConfig; }
+export interface ConsoleEntry { timestamp: string; elapsedMs: number; type: string; text: string; location?: { url: string; lineNumber?: number; columnNumber?: number }; }
+export interface RunRecord { id: string; assessmentUrl: string; strategyId?: string; strategyVersion?: number; mode: TestingMode; simulated: boolean; startedAt: string; endedAt?: string; status: "running"|"paused"|"completed"|"failed"|"stopped"; actions: ActionLog[]; consoleMessages?: ConsoleEntry[]; screenshots: string[]; errors: string[]; warnings: string[]; tokenUsage: { input: number; output: number; estimatedCostUsd: number }; participant?: ParticipantConfig; }
 
 export function validateStrategy(input: unknown): Strategy { return strategySchema.parse(input); }

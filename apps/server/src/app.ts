@@ -17,6 +17,7 @@ import { CodexAuthService } from "./CodexAuthService.js";
 export function createStudio() {
   const app=express();app.use(cors({origin:process.env.WEB_ORIGIN??true}));app.use(express.json({limit:"15mb"}));
   const browser=new BrowserController();const logger=new RunLogger();const dom=new DOMAgent(browser);const engine=new StrategyEngine(browser,logger,dom);const vision=new VisionAgent(browser,logger);
+  browser.setConsoleHandler(message=>logger.console(message));
   const codexAuth=new CodexAuthService();
   let activeMode:TestingMode="scripted";
   const recorder=new Recorder(()=>browser.viewport,()=>browser.screenshot("recording"));browser.setInputHandler((event)=>recorder.receive(event));

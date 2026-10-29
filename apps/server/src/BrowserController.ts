@@ -2,6 +2,7 @@ import { chromium, type Browser, type BrowserContext, type Page } from "playwrig
 import path from "node:path";
 import { writeFile } from "node:fs/promises";
 import { screenshotDir, ensureStorage } from "./storage.js";
+import type { ConsoleEntry } from "@studio/shared";
 import type { RawInputEvent } from "./Recorder.js";
 
 export type CapturedScreenshot={buffer:Buffer;width:number;height:number};
@@ -16,6 +17,8 @@ export class BrowserController {
   viewport = { width: 1280, height: 800 };
   headless=process.env.PLAYWRIGHT_HEADLESS==="1";
   private screenRevision=0;
+  private consoleHandler: (message: Omit<ConsoleEntry, "timestamp" | "elapsedMs">) => void = () => {};
+  setConsoleHandler(handler: typeof this.consoleHandler) { this.consoleHandler = handler; }
   private inputHandler: (event: RawInputEvent) => void | Promise<void> = () => {};
   setInputHandler(handler: typeof this.inputHandler) { this.inputHandler = handler; }
   async launch(url: string, viewport = this.viewport, headless=this.headless) {
@@ -28,7 +31,7 @@ export class BrowserController {
       addEventListener("click", e => send({ kind: "click", x: e.clientX, y: e.clientY, button: e.button, time: performance.now() }), true);
       addEventListener("keydown", e => send({ kind: "keydown", key: e.key, repeat: e.repeat, time: performance.now() }), true);
     })();`});
-    this.page = await this.context.newPage(); this.page.on("pageerror",error=>this.errors.push(error.message));this.page.on("framenavigated",frame=>{if(frame===this.page?.mainFrame())this.markScreenChanged();});await this.page.goto(url, { waitUntil: "domcontentloaded", timeout: 45000 });this.markScreenChanged();
+    this.page = await this.context.newPage(); this.page.on("console", message => { const location = message.location(); this.consoleHandler({ type: message.type(), text: message.text(), location }); }); this.page.on("pageerror",error=>this.errors.push(error.message));this.page.on("framenavigated",frame=>{if(frame===this.page?.mainFrame())this.markScreenChanged();});await this.page.goto(url, { waitUntil: "domcontentloaded", timeout: 45000 });this.markScreenChanged();
   }
   private requirePage() { if (!this.page) throw new Error("No assessment browser is running"); return this.page; }
   async restart() { if (!this.url) throw new Error("No assessment URL to restart"); await this.launch(this.url, this.viewport); }

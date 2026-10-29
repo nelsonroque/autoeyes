@@ -23,6 +23,10 @@ npm start
 
 Then open `http://localhost:4310`.
 
+## Launch URL parameters
+
+Add name/value rows under **URL parameters** before launching an assessment. Rows are saved in the dashboard browser’s local storage and restored on future visits. They are appended to any query parameters already in the URL, including duplicate names. Values are stored in plain text in that browser; avoid saving secrets on shared devices.
+
 ## P0 workflow
 
 1. Leave the prefilled M2C2 URL or enter any assessment URL and click **Launch Assessment**.
@@ -42,6 +46,14 @@ The bundled fallback is `http://localhost:4310/mock-assessment`. It renders the 
 - **DOM-driven** is isolated behind separate discovery/action APIs and is the only mode permitted to use locators, element text, roles, or selectors.
 
 The recording hook listens to raw input events so that inputs made in the Playwright-controlled window can be saved. It does not query targets, selectors, the accessibility tree, canvas state, or application variables. Recording screenshots and replay screenshots are written under `data/screenshots`; run logs are under `data/runs`; strategies are under `data/strategies`.
+
+## Browser console capture
+
+During a replay or AI run, console messages from the assessment page (including its frames) are captured with their type, text, source location, and time relative to the run start. They appear in the execution monitor and run history and are included in exported run JSON. Capture starts when the run starts, so messages from the initial page load are not included unless the page reloads during the run. To bound storage, each run keeps up to 1,000 messages and truncates individual messages at 10,000 characters. Console output may contain sensitive assessment data; handle run files accordingly.
+
+## Comparing sessions
+
+Select saved runs under **Compare sessions** to compare action counts, durations and console message counts. Numeric values in complete JSON console messages or labeled JSON records such as `newData: {...}` can also be plotted by field and observation order, including nested objects and arrays. Per-session histograms show counts in shared bins for the selected field, such as `response_time_duration_ms`. Plain diagnostic text, incomplete JSON and non-JSON object previews are not interpreted as result data. Check that a field has the same meaning and units across runs; action counts and dispatch intervals are not assessment scores or response times. Older runs without console capture remain available.
 
 ## Strategy model
 
