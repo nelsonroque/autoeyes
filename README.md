@@ -107,17 +107,8 @@ PLAYWRIGHT_HEADLESS=1 npm run dev
 
 ## Current limitations
 
-- Recording is scoped to the current top-level page. Input inside cross-origin child frames is not currently captured.
 - Visual-change waits detect rendered screenshot change, but the MVP does not yet classify the new screen or use perceptual regions/thresholds.
-- Recorded printable text is represented as keypresses. Paste and IME composition are not yet converted to a single `type` action.
-- AI-assisted conversion of a successful run into generalized visual templates is represented by the strategy format but not yet automated in the UI.
 - AI inference requires a locally installed, device-authenticated Codex CLI and a vision-capable model available to that ChatGPT account or workspace.
 - Simulation can schedule timing and lapses generically, but task-specific wrong-answer choice requires a strategy whose alternative responses are explicitly parameterized.
-- Application-recorded response time is only available in DOM mode when a task exposes it; normal logs distinguish planned delay and actual dispatch time.
-- There is no Electron packaging or batch runner in this MVP.
 
 Use only on assessments you are authorized to automate. Keep synthetic runs isolated from research participant datasets.
-
-
-
-377,175; 365,178
